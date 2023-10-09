@@ -1,7 +1,27 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// vite.config.js in todo-components
+// @ts-ignore
+import { defineConfig } from "vite";
+// @ts-ignore
+import react from "@vitejs/plugin-react";
+// @ts-ignore
+import federation from "@originjs/vite-plugin-federation";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    react(),
+    federation({
+      name: "ag-grid",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Grid": "./src/Grid.tsx",
+      },
+      shared: ["react"],
+    }),
+  ],
+  build: {
+    modulePreload: false,
+    target: "esnext",
+    minify: false,
+    cssCodeSplit: false,
+  },
+});
