@@ -9,10 +9,12 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "comment": "works with 26.1.0",
   "dependencies": {
-    "ag-grid-community": "26.1.0",
-    "ag-grid-enterprise": "26.1.0",
-    "ag-grid-react": "26.1.0",
+
+    "ag-grid-community": "27.2.1",
+    "ag-grid-enterprise": "27.2.1",
+    "ag-grid-react": "27.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

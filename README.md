@@ -12,4 +12,7 @@ yarn dev
 
 ```
 
+If you use version 26.1.0 of AG Grid it works
+if you use version 27.x.x of AG Grid of later it breaks.
+
 
